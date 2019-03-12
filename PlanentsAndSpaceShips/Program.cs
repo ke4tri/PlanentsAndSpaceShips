@@ -16,15 +16,27 @@ namespace PlanentsAndSpaceShips
 
             combinedList.AddRange(lastPlanetList);
             combinedList.AddRange(planetList);
+            combinedList.Insert(3, "Earth");
+            combinedList.Insert(2, "Venus");
+            planetList.Add("Pluto");
 
 
             Console.WriteLine("This is from the combined list :");
-            foreach (var item in planetList)
+
+            foreach (var item in combinedList)
             {
-                //var listJoined = String.Join("", item);
-                //Console.Write(listJoined);
+              
                 Console.Write(item + ", ");
+
             }
+
+            //foreach (var item in planetList)
+            //{
+            //    
+            //    
+            //    Console.Write(item + ", ");
+                
+            //}
             Console.ReadLine();
 
         }
