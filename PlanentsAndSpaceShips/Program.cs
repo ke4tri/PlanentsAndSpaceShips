@@ -27,20 +27,41 @@ namespace PlanentsAndSpaceShips
             foreach (var item in combinedList)
             {
                 
-                Console.Write(item + ", ");
+                Console.Write(item + ", \n");
             }
 
             combinedList.Remove("Pluto");
 
-            Console.Write("This is without Pluto: ");
+            Console.Write("\nThis is without Pluto: ");
             foreach (var item in combinedList)
             {
                 
-                Console.Write(item + ", ");
+                Console.Write(item + ", \n");
             }
 
             Console.ReadLine();
+
+            List<string> mainShipPlanets = new List<string>() { "Saturn", "Uranus" };
+            List<string> secondShipPlanets = new List<string>() { "Earth", "Pluto", "Mars" };
+
+
+            var shipsAndPlanetsVisit = new Dictionary<string, List<string>> { };
+            shipsAndPlanetsVisit.Add("The Main Ship", mainShipPlanets);
+            shipsAndPlanetsVisit.Add("The Second Ship", secondShipPlanets);
+
+            foreach (var (ships, planets) in shipsAndPlanetsVisit)
+            {
+                Console.WriteLine($"This ship {ships} has visited these planets : ");
+                foreach (var planet in planets)
+                {
+                    Console.WriteLine(planet);
+                }
+                Console.WriteLine("\n");
+            }
+            
+            Console.ReadLine();
         }
+
     }
 }
 
