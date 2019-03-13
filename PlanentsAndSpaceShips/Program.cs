@@ -9,36 +9,43 @@ namespace PlanentsAndSpaceShips
         {
             List<string> planetList = new List<string>() { "Mercury", "Mars" };
             planetList.Add("Jupiter");
-            planetList.Add("Saturn");
+            
             
             List<string> lastPlanetList = new List<string>() { "Saturn", "Uranus" };
             List<string> combinedList = new List<string>();
 
-            combinedList.AddRange(lastPlanetList);
             combinedList.AddRange(planetList);
-            combinedList.Insert(3, "Earth");
-            combinedList.Insert(2, "Venus");
-            planetList.Add("Pluto");
+            combinedList.AddRange(lastPlanetList);
+            
+            combinedList.Insert(1, "Earth");
+            combinedList.Insert(1, "Venus");
+            combinedList.Add("Pluto");
 
 
             Console.WriteLine("This is from the combined list :");
 
             foreach (var item in combinedList)
             {
-              
+                
                 Console.Write(item + ", ");
-
             }
 
-            //foreach (var item in planetList)
-            //{
-            //    
-            //    
-            //    Console.Write(item + ", ");
-                
-            //}
-            Console.ReadLine();
+            combinedList.Remove("Pluto");
 
+            Console.Write("This is without Pluto: ");
+            foreach (var item in combinedList)
+            {
+                
+                Console.Write(item + ", ");
+            }
+
+            Console.ReadLine();
         }
     }
 }
+
+
+            
+
+              
+
